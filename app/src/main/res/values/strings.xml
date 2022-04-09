@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Movies</string>
+
+    <string name="menu_movies">Movies</string>
+    <string name="menu_map">Map</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_users">Users</string>
+</resources>

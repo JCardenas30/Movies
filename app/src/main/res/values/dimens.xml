@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_medium">12dp</dimen>
+    <dimen name="preview_avatar_size">120dp</dimen>
+    <dimen name="preview_avatar_radius">60dp</dimen>
+</resources>

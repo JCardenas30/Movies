@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "373021014257",
+    "project_id": "movies-55c4a",
+    "storage_bucket": "movies-55c4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373021014257:android:fdcc852d74dff58a56d150",
+        "android_client_info": {
+          "package_name": "com.jcardenas.movies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "373021014257-m3bkpf7jctld0v71sfdh0fgk464cqmak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB56ZZ7kPZ-Vaj0FHGSkk0E62_hiCrXEtc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "373021014257-m3bkpf7jctld0v71sfdh0fgk464cqmak.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    app:startDestination="@id/moviesFragment">
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.jcardenas.presentation.views.MoviesFragment"
+        android:label="MoviesFragment" />
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.jcardenas.presentation.views.GalleryFragment"
+        android:label="GalleryFragment" />
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.jcardenas.presentation.views.MapFragment"
+        android:label="MapFragment" />
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.jcardenas.presentation.views.UsersFragment"
+        android:label="UsersFragment" >
+        <action
+            android:id="@+id/action_usersFragment_to_formUserFragment"
+            app:destination="@id/formUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formUserFragment"
+        android:name="com.jcardenas.presentation.views.FormUserFragment"
+        android:label="FormUserFragment" />
+</navigation>
