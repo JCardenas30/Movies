@@ -14,10 +14,10 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/containerProfile"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="@dimen/thumb_profile_size"
+            android:layout_height="@dimen/thumb_profile_size"
             android:layout_marginStart="@dimen/margin_default"
-            app:cardCornerRadius="35dp"
+            app:cardCornerRadius="@dimen/thumb_profile_radius"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent">
@@ -38,7 +38,7 @@
             android:layout_margin="@dimen/margin_medium"
             android:layout_marginHorizontal="@dimen/margin_default"
             android:text="@{itemViewModel.fullName}"
-            android:textSize="16sp"
+            android:textSize="@dimen/font_size_title"
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toRightOf="@id/containerProfile"
@@ -50,7 +50,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/margin_default"
-            android:textSize="12sp"
+            android:textSize="@dimen/font_size_default"
             app:layout_constraintTop_toTopOf="@id/txtFullName"
             app:layout_constraintBottom_toBottomOf="@id/txtFullName"
             app:layout_constraintRight_toRightOf="parent"/>
@@ -61,7 +61,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_default"
-            android:textSize="12sp"
+            android:textSize="@dimen/font_size_default"
             app:layout_constraintTop_toBottomOf="@id/txtFullName"
             app:layout_constraintLeft_toRightOf="@id/containerProfile"
             app:layout_constraintRight_toRightOf="parent"/>
@@ -72,7 +72,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_default"
-            android:textSize="12sp"
+            android:textSize="@dimen/font_size_default"
             app:layout_constraintTop_toBottomOf="@id/txtPhone"
             app:layout_constraintLeft_toRightOf="@id/containerProfile"
             app:layout_constraintRight_toRightOf="parent"/>
@@ -83,7 +83,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_default"
-            android:textSize="12sp"
+            android:textSize="@dimen/font_size_default"
             app:layout_constraintTop_toBottomOf="@id/txtEmail"
             app:layout_constraintLeft_toRightOf="@id/containerProfile"
             app:layout_constraintRight_toRightOf="parent"/>

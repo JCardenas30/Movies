@@ -12,7 +12,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="@dimen/movie_item_height"
         android:layout_margin="@dimen/margin_medium">
 
         <ImageView
@@ -20,8 +20,8 @@
             android:scaleType="centerCrop"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:elevation="8dp"
-            android:layout_marginTop="8dp"
+            android:elevation="@dimen/elevation"
+            android:layout_marginTop="@dimen/margin_short"
             android:layout_marginStart="@dimen/margin_default"
             android:layout_marginBottom="@dimen/margin_default"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -29,7 +29,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="@dimen/movie_details_height"
             app:cardCornerRadius="@dimen/margin_medium"
             app:cardBackgroundColor="#808080"
             app:cardElevation="0dp"
@@ -53,7 +53,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@{itemViewModel.title}"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/font_size_title"
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:layout_marginHorizontal="@dimen/margin_default"
@@ -76,7 +76,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/font_size_default"
                     android:layout_marginHorizontal="@dimen/margin_default"
                     android:text="@{itemViewModel.description}"
                     android:maxLines="4"

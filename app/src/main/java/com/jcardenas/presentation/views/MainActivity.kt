@@ -8,9 +8,12 @@ import android.content.pm.PackageManager
 import android.content.pm.PackageManager.PERMISSION_GRANTED
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
+import androidx.navigation.NavDestination
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.NavHostFragment
 import com.jcardenas.movies.R
@@ -49,6 +52,18 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+
+        navController.addOnDestinationChangedListener(object: NavController.OnDestinationChangedListener{
+            override fun onDestinationChanged(
+                controller: NavController,
+                destination: NavDestination,
+                arguments: Bundle?
+            ) {
+                if(destination.id == R.id.formUserFragment) binding.bottomNav.visibility = View.GONE
+                else binding.bottomNav.visibility = View.VISIBLE
+            }
+
+        })
     }
 
     fun showError(clickListener: DialogInterface.OnClickListener): Dialog{

@@ -50,7 +50,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilKey"
                 style="@style/TextInputLayout"
-                android:hint="Employe number"
+                android:hint="@string/hint_employee_number"
                 app:errorEnabled="true"
                 app:startIconDrawable="@drawable/ic_baseline_vpn_key_24"
                 app:layout_constraintTop_toBottomOf="@id/containerProfile"
@@ -70,7 +70,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilFullName"
                 style="@style/TextInputLayout"
-                android:hint="Full name"
+                android:hint="@string/hint_full_name"
                 app:errorEnabled="true"
                 app:startIconDrawable="@drawable/ic_baseline_person_24"
                 app:layout_constraintTop_toBottomOf="@id/tilKey"
@@ -90,7 +90,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilPhoneNumber"
                 style="@style/TextInputLayout"
-                android:hint="Phone number"
+                android:hint="@string/hint_phone"
                 app:errorEnabled="true"
                 app:startIconDrawable="@drawable/ic_baseline_smartphone_24"
                 app:layout_constraintTop_toBottomOf="@id/tilFullName"
@@ -109,7 +109,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilEmail"
                 style="@style/TextInputLayout"
-                android:hint="Email"
+                android:hint="@string/hint_email"
                 app:errorEnabled="true"
                 app:startIconDrawable="@drawable/ic_baseline_email_24"
                 app:layout_constraintTop_toBottomOf="@id/tilPhoneNumber"
@@ -129,7 +129,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilAddress"
                 style="@style/TextInputLayout"
-                android:hint="Address"
+                android:hint="@string/hint_address"
                 app:errorEnabled="true"
                 app:startIconDrawable="@drawable/ic_baseline_location_on_24"
                 app:layout_constraintTop_toBottomOf="@id/tilEmail"
@@ -150,7 +150,7 @@
                 android:id="@+id/btnSave"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Save"
+                android:text="@string/btn_save"
                 android:layout_marginTop="@dimen/margin_default"
                 app:layout_constraintTop_toBottomOf="@id/tilAddress"
                 app:layout_constraintLeft_toLeftOf="parent"

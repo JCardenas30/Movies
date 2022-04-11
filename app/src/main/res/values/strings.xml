@@ -7,6 +7,11 @@
     <string name="menu_users">Users</string>
     <string name="btn_ok">Ok</string>
     <string name="btn_save">Save</string>
+    <string name="hint_employee_number">Employe number</string>
+    <string name="hint_full_name">Full name</string>
+    <string name="hint_phone">Phone number</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_address">Address</string>
     <string name="error_required">Required</string>
     <string name="error_generic">Ooops! Something unexpected happened,\nclick here to try again.</string>
     <string name="empty_gallery">Booo! the gallery is empty,\npress the button on the top right to add.
