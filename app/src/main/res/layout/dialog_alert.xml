@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_large"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/bgHeader"
+                android:background="@android:color/holo_red_light"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/alert_header_height"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:src="@drawable/ic_baseline_error_outline_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/bgHeader"
+                app:layout_constraintBottom_toBottomOf="@id/bgHeader"
+                app:layout_constraintLeft_toLeftOf="@id/bgHeader"
+                app:layout_constraintRight_toRightOf="@id/bgHeader"
+                app:tint="@color/white" />
+
+            <TextView
+                android:textColor="@android:color/holo_red_light"
+                android:text="@string/error_generic"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_large"
+                app:layout_constraintTop_toBottomOf="@id/bgHeader"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

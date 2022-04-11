@@ -7,6 +7,7 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
+import com.jcardenas.domain.common.ListItemViewModel
 import com.jcardenas.movies.BR
 
 class GenericAdapter<T : ListItemViewModel>(@LayoutRes val layoutId: Int) :
@@ -18,9 +19,9 @@ class GenericAdapter<T : ListItemViewModel>(@LayoutRes val layoutId: Int) :
     private var onListItemViewClickListener: OnListItemViewClickListener? = null
 
     fun addItems(items: List<T>) {
-        lastSize = this.items.size
+        this.items.clear()
         this.items.addAll(items)
-        notifyItemMoved(lastSize, this.items.size)
+        notifyDataSetChanged()
     }
 
     fun getItem(position: Int): T? {
@@ -63,9 +64,4 @@ class GenericAdapter<T : ListItemViewModel>(@LayoutRes val layoutId: Int) :
     interface OnListItemViewClickListener{
         fun onClick(view: View, position: Int)
     }
-}
-
-abstract class ListItemViewModel{
-    var adapterPosition: Int = -1
-    var onListItemViewClickListener: GenericAdapter.OnListItemViewClickListener? = null
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+        <variable
+            name="itemViewModel"
+            type="com.jcardenas.domain.entities.Image" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_margin="@dimen/margin_short"
+        android:layout_width="@dimen/gallery_item_width"
+        android:layout_height="@dimen/gallery_item_height">
+
+        <ImageView
+            android:src="@{itemViewModel.reference}"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

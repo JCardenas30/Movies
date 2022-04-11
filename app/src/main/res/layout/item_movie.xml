@@ -4,10 +4,10 @@
     <data>
 
         <import type="android.view.View" />
-
+        <import type="com.jcardenas.domain.common.Constants"/>
         <variable
             name="itemViewModel"
-            type="com.jcardenas.presentation.models.Movie" />
+            type="com.jcardenas.domain.entities.Movie" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,7 +16,7 @@
         android:layout_margin="@dimen/margin_medium">
 
         <ImageView
-            android:src="@drawable/ic_baseline_image_24"
+            android:src="@{Constants.BASE_IMAGE_URL + itemViewModel.posterPath}"
             android:scaleType="centerCrop"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -52,7 +52,7 @@
                     android:id="@+id/txtMovieName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Sonic 2"
+                    android:text="@{itemViewModel.title}"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@color/white"
@@ -68,6 +68,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_default"
+                    android:rating="@{itemViewModel.voteAverage}"
                     app:layout_constraintTop_toBottomOf="@id/txtMovieName"
                     app:layout_constraintLeft_toRightOf="@id/auxPoster" />
 
@@ -77,7 +78,7 @@
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     android:layout_marginHorizontal="@dimen/margin_default"
-                    android:text="Hola esta sería la sinopssis para sonic 2, yo creo que con unas 4 lineas bastaría pero vamos a ver que tal si es que se ve bien o no se acomoda a 4 linas, hay que intentarlo"
+                    android:text="@{itemViewModel.description}"
                     android:maxLines="4"
                     android:ellipsize="end"
                     app:layout_constraintRight_toRightOf="parent"

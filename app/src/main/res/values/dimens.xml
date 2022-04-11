@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="margin_large">32dp</dimen>
     <dimen name="margin_default">16dp</dimen>
     <dimen name="margin_medium">12dp</dimen>
+    <dimen name="margin_short">8dp</dimen>
+    <dimen name="alert_header_height">64dp</dimen>
     <dimen name="preview_avatar_size">120dp</dimen>
     <dimen name="preview_avatar_radius">60dp</dimen>
+    <dimen name="gallery_item_width">100dp</dimen>
+    <dimen name="gallery_item_height">120dp</dimen>
 </resources>

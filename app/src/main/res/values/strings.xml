@@ -5,4 +5,10 @@
     <string name="menu_map">Map</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_users">Users</string>
+    <string name="btn_ok">Ok</string>
+    <string name="btn_save">Save</string>
+    <string name="error_required">Required</string>
+    <string name="error_generic">Ooops! Something unexpected happened,\nclick here to try again.</string>
+    <string name="empty_gallery">Booo! the gallery is empty,\npress the button on the top right to add.
+</string>
 </resources>

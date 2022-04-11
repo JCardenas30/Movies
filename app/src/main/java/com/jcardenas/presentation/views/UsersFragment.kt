@@ -4,18 +4,41 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.GeneratedAdapter
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
 import androidx.navigation.fragment.findNavController
+import com.jcardenas.domain.entities.User
 import com.jcardenas.movies.R
 import com.jcardenas.movies.databinding.FragmentUserBinding
+import com.jcardenas.presentation.helpers.GenericAdapter
 import com.jcardenas.presentation.vm.UsersViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-class UsersFragment: BaseFragment<UsersViewModel, FragmentUserBinding>() {
+@AndroidEntryPoint
+class UsersFragment: BaseFragment<FragmentUserBinding>() {
+
+    private val viewModel: UsersViewModel by viewModels()
+    private val userAdapter = GenericAdapter<User>(R.layout.item_user)
+
     override fun getLayout(): Int = R.layout.fragment_user
-    override fun getViewModelClass(): Class<UsersViewModel> = UsersViewModel::class.java
+    override fun bindViewToModel() {
+        binding.viewModel = viewModel
+    }
 
     override fun setupUI() {
         setTitle(R.string.menu_users)
+        binding.rvUsers.adapter = userAdapter
         setHasOptionsMenu(true)
+        addObservers()
+    }
+
+    fun addObservers(){
+        viewModel.all().asLiveData().observe(this, Observer {
+            userAdapter.addItems(it)
+        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
